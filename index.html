@@ -12,8 +12,10 @@
         .drag_js {
             width: 50px;
             height: 50px;
-            background-color: red;
+            background-color: green;
+            border-radius: 3px;
         }
+        
     </style>
 </head>
 
@@ -28,9 +30,9 @@
             this.element = document.querySelector(element);
             this.element.addEventListener('mousedown', this.handleStart);
 
-            this.handleStart = this.handleStart.bind(this);
-            this.handleDrag = this.handleDrag.bind(this);
-            this.handleEnd = this.handleEnd.bind(this);
+            // this.handleStart = this.handleStart.bind(this);
+            // this.handleDrag = this.handleDrag.bind(this);
+            // this.handleEnd = this.handleEnd.bind(this);
 
 
         }
@@ -42,7 +44,7 @@
         };
 
         handleDrag(e) {
-            e.stopPropagation()
+            e.stopPropagation();
             console.log('moving');
 
         };
